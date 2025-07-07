@@ -24,7 +24,7 @@ const quotes = [
   },
   {
     quote: "I am the master of my fate. I am the captain of my soul.",
-    source: "Wlliam Ernest Henley",
+    source: "William Ernest Henley",
     year: 1875,
   },
   {
@@ -33,7 +33,7 @@ const quotes = [
   },
   {
     quote:
-      "“Failure is not fatal until we surrender. Trying again is the key of glorious victory.",
+      "Failure is not fatal until we surrender. Trying again is the key of glorious victory.",
     source: "Muhammad Iqbal",
   },
 ];
@@ -52,15 +52,16 @@ function getRandomQuote() {
  ***/
 function printQuote() {
   let randomQuote = getRandomQuote();
-  let html = `<p class="quote">${randomQuote.quote} </p>`;
+  let html = `<p class="quote">${randomQuote.quote}</p>`;
   html += `<p class="source">${randomQuote.source}`;
   if (randomQuote.citation) {
-    html += `<span class="citation"> ${randomQuote.citation} </span>`;
+    html += `<span class="citation"> ${randomQuote.citation}</span>`;
   }
   if (randomQuote.year) {
-    html += `<span class="year"> ${randomQuote.year} </span>`;
+    html += `<span class="year"> ${randomQuote.year}</span>`;
   }
   html += `</p>`;
+  document.getElementById("quote-box").innerHTML = html;
 }
 
 /***
