@@ -50,6 +50,18 @@ function getRandomQuote() {
 /***
  * `printQuote` function
  ***/
+function printQuote() {
+  let randomQuote = getRandomQuote();
+  let html = `<p class="quote">${randomQuote.quote} </p>`;
+  html += `<p class="source">${randomQuote.source}`;
+  if (randomQuote.citation) {
+    html += `<span class="citation"> ${randomQuote.citation} </span>`;
+  }
+  if (randomQuote.year) {
+    html += `<span class="year"> ${randomQuote.year} </span>`;
+  }
+  html += `</p>`;
+}
 
 /***
  * click event listener for the print quote button
