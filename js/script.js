@@ -53,6 +53,7 @@ function changerandomColor() {
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
   const RGBcolor = `rgb: (${red}, ${green}, ${blue})`;
+  document.querySelector("body").style.backgroundColor = RGBcolor;
 }
 
 /***
@@ -73,6 +74,8 @@ function printQuote() {
   }
   html += `</p>`;
   document.getElementById("quote-box").innerHTML = html;
+
+  changerandomColor();
 }
 
 /***
