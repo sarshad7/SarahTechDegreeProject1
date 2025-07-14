@@ -21,7 +21,7 @@ const quotes = [
     quote:
       "A little knowledge that acts is worth infinitely more than much knowledge that is idle.",
     source: "Khalil Gibran",
-    tags: ["philosophy", "poetry"],
+    tags: ["philosophy", " poetry"],
   },
   {
     quote: "I am the master of my fate. I am the captain of my soul.",
@@ -52,9 +52,11 @@ function changerandomColor() {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
-  const RGBcolor = `rgb: (${red}, ${green}, ${blue})`;
+  const RGBcolor = `rgb(${red}, ${green}, ${blue})`;
   document.querySelector("body").style.backgroundColor = RGBcolor;
 }
+
+function quoteUpdate() {}
 
 /***
  * `printQuote` function
@@ -86,3 +88,4 @@ function printQuote() {
 document
   .getElementById("load-quote")
   .addEventListener("click", printQuote, false);
+setInterval(printQuote, 10000);
